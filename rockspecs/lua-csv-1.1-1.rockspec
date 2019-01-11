@@ -19,6 +19,6 @@ build =
   type = "builtin",
   modules =
   {
-    lua-csv.csv = "lib/lua-csv/csv.lua",
+    ["lua-csv.csv"] = "lib/lua-csv/csv.lua",
   },
 }
