@@ -46,7 +46,7 @@ local function test(filename, correct_result, parameters)
   end
 end
 
-test("../test-data/embedded-newlines.csv", [[
+test("../../test-data/embedded-newlines.csv", [[
 embedded
 newline,embedded
 newline,embedded
@@ -56,32 +56,32 @@ newline,embedded
 newline,embedded
 newline!]])
 
-test("../test-data/embedded-quotes.csv", [[
+test("../../test-data/embedded-quotes.csv", [[
 embedded "quotes",embedded "quotes",embedded "quotes"!
 embedded "quotes",embedded "quotes",embedded "quotes"!]])
 
-test("../test-data/header.csv", [[
+test("../../test-data/header.csv", [[
 alpha:ONE,bravo:two,charlie:3!
 alpha:four,bravo:five,charlie:6!]], {header=true})
 
-test("../test-data/header.csv", [[
+test("../../test-data/header.csv", [[
 apple:one,charlie:30!
 apple:four,charlie:60!]],
 { columns = {
   apple = { name = "ALPHA", transform = string.lower },
   charlie = { transform = function(x) return tonumber(x) * 10 end }}})
 
-test("../test-data/blank-line.csv", [[
+test("../../test-data/blank-line.csv", [[
 this,file,ends,with,a,blank,line!]])
 
-test("../test-data/BOM.csv", [[
+test("../../test-data/BOM.csv", [[
 apple:one,charlie:30!
 apple:four,charlie:60!]],
 { columns = {
   apple = { name = "ALPHA", transform = string.lower },
   charlie = { transform = function(x) return tonumber(x) * 10 end }}})
 
-test("../test-data/bars.txt", [[
+test("../../test-data/bars.txt", [[
 there's a comma in this field, but no newline,embedded
 newline,embedded
 newline!

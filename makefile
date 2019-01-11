@@ -8,7 +8,7 @@ default:
 	@echo "Nothing to build.  Try 'make install' or 'make test'."
 
 install:
-	cp lua/csv.lua $(LUA_SHAREDIR)
+	cp lib/lua-csv/csv.lua $(LUA_SHAREDIR)
 
 test:
-	cd lua && $(LUA) test.lua
+	cd lib/lua-csv/ && $(LUA) test.lua
