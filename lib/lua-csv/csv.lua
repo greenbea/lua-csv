@@ -500,6 +500,8 @@ local function use(
     buffer = file_buffer:new(buffer)
   end
 
+  buffer = buffer:gsub("\n+", "\n"):gsub("\n\"", "\"")
+
   local f = { buffer = buffer, parameters = parameters }
   return setmetatable(f, buffer_mt)
 end
